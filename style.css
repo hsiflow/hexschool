@@ -1,0 +1,213 @@
+/* 
+目前進度 / 問題點：
+-整體內容三欄卡片置中
+v卡片容器包住 h3 與 card-text
+v卡片容器 w416, h476
+-卡片與卡片水平間距 24px、垂直間距 40px 40px
+gap ?
+-人氣文章 blueBtn 與 tag 距離
+
+確保這個徽章元素不是卡片主體排版的一部分（建議放在卡片外層 relative 裡，獨立定位）。
+-RWD col-grid-column repeat 1, 1fr
+小螢幕 2 欄；手機尺寸 1 欄
+-24 px; 
+*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+}
+
+h3 {
+    width: inherit;
+    color: #000;
+    font-weight: 700;
+    font-size: 1.75rem;;
+    /* 28/16 =  1.75*/
+    margin-bottom: 8px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    /* 讓太長的單字也可以斷行 */
+    white-space: normal; 
+    /* 允許自動換行（不要一行到底） */
+}
+
+/* p {
+    margin-bottom: 16px;
+} */
+
+.container {
+    margin: 0 auto;
+    width: 80%;
+    padding-left: 1rem;   /* 避免貼邊 */
+    padding-right: 1rem;
+    /* display: flex;
+    justify-content: center; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-container {    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* gap: 1.5rem; */
+    list-style-type: none;
+    max-width: 1920px;
+}
+
+.card-container img {
+    width: 100%;
+    aspect-ratio: 2.08;    
+    margin-bottom: 1rem;
+}
+
+.card {
+    /* width: 416px; */
+    width: 100%;
+    max-width: 100%;
+    flex: 0 1 calc(33.333% - 20px); /* 三欄減掉間距 */
+    background-color: #ffffff;
+    padding: 1rem;
+    /* border: 1px solid #ddd; */
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+    overflow: hidden;        /* 防止內容溢出 */
+    word-wrap: break-word;   /* 長單字斷行 */
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card-content {
+    width: 100%;
+}
+
+.date {    
+    font-size: 1rem;
+    line-height: 150%;
+    margin-bottom: 0.25rem;
+}
+
+.tag {
+    font-size: 1.5rem;
+    /* 24/16 = 1.5 */
+    line-height: 150%;
+    color: #0027D5;
+}
+
+.tags-and-button {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+    height: 2.25rem;
+    /* 36/16 = 2.25 */
+    margin-bottom: 1rem;
+}
+
+.card-text {
+    color: #4B4B4B;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;      /* 顯示行數 */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* .clamp-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+} */
+
+button {
+    background-color: #ffffff;
+    color: #4B4B4B;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border: solid 1px #000;
+    border-radius: 2.5rem;
+    font-size: 1rem;
+}
+
+.blueBtn {
+    background-color: #0027D5;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    align-self: center;
+    margin: 0;
+    /* position: absolute;
+    right: 20px; */
+}
+
+@media (max-width: 1500px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 1028px) and (min-width: 769px) {
+    .card-content{
+        position: relative;
+    }
+    .blueBtn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0.25rem 0.5rem;
+        font-weight: normal;
+    }
+}
+
+
+@media (max-width: 768px){
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        padding: 0;
+        width: 100%;
+    }
+
+    .container img {
+        aspect-ratio: 1.755;
+        /* width: 351px;
+        height: 200px; */
+    }
+
+    .tags-and-button {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* gap: 0; */
+    }
+
+    .card {
+        padding: 0.75rem;
+    }
+}
+
+@media (max-width: 375px) {
+      
+}
+
+
