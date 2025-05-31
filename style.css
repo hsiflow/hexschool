@@ -19,8 +19,13 @@ gap ?
 	box-sizing: border-box;
 }
 
+html {
+	font-size: 16px;
+}
+
 body {
 	font-family: 'Noto Sans TC', sans-serif;
+	font-size: 16px;
 	font-weight: 500;
 	line-height: 150%;
 }
@@ -68,6 +73,14 @@ h4 {
 	font-size: 1.25rem; /* 20/16 = 1.25 */
 	margin-bottom: 0.75rem;
 	font-weight: 700;
+}
+
+/* index page */
+.intro {
+	background-color: #ffffff;
+	padding: 80px 40px;
+	width: 1077px;
+	height: 362px;
 }
 
 /* p {
@@ -165,9 +178,9 @@ h4 {
 
 /* blog-detail */
 .hero {
-    display: flex;
-    gap: 1.5rem;
-    border: 1px solid #6C757D
+	display: flex;
+	gap: 1.5rem;
+	border: 1px solid #6c757d;
 }
 
 .container.blog-content {
@@ -183,15 +196,15 @@ h4 {
 
 .blog-content h3 {
 	color: #0027d5;
-    margin-bottom: 1.5rem; /* 24/16 = 1.5 */
+	margin-bottom: 1.5rem; /* 24/16 = 1.5 */
 }
 
 .content img {
 	width: 100%;
 	height: auto;
-    /* margin-top: 3rem; 48/16 = 3 */
-    margin-top: 1.5rem; /* 24/16 = 1.5 */
-    margin-bottom: 1.5rem; /* 24/16 = 1.5 */
+	/* margin-top: 3rem; 48/16 = 3 */
+	margin-top: 1.5rem; /* 24/16 = 1.5 */
+	margin-bottom: 1.5rem; /* 24/16 = 1.5 */
 }
 
 .grey-pattern {

@@ -12,31 +12,91 @@
 	<body>
 		<header>
 			<nav>
-				<ul>
+				<ul class="text-[1.75rem] font-bold flex justify-center flex-row gap-x-[40px] m-[24px]">
 					<li>首頁</li>
 					<li>部落格</li>
 				</ul>
 			</nav>
-			<section class="hero">
-				<img class="grid-cols-6" src="./image/index/Hero Section.png" alt="" />
-				<!-- background img -->
-				<img class="grid-cols-6" src="./image/index/Hero Section2.png" alt="" />
-				<h1>Alyse Wang</h1>
-				<p>前端工程師 & 職涯諮詢師</p>
-			</section>
-			<section class="intro">
-				<p>嗨，我是 Alyse 一名深耕前端技術的工程師。</p>
-				<p>
-					擅長 React、Vue 等框架，同時熱愛為轉職與新手工程師提供職涯指導。邀請你與我一起，開啟更具潛能的程式與職涯之旅！
-				</p>
-				<div class="flex">
-					<i class="social-icon" src="./image/index/onlyIcon.png" alt="YouTube Icon"></i>
-					<i class="social-icon" src="./image/index/onlyIcon-1.png" alt="Apple Podcast Icon"></i>
-					<i class="social-icon" src="./image/index/onlyIcon-2.png" alt="Facebook Icon"></i>
-					<i class="social-icon" src="./image/index/onlyIcon-3.png" alt="LinkedIn Icon"></i>
-					<i class="social-icon" src="./image/index/onlyIcon-4.png" alt="Instagram Icon"></i>
+			<section class="relative w-full md:flex">
+				<div class="md:w-1/2">
+					<img src="./image/index/Hero Section.png" alt="個人照片" />
 				</div>
-			</section>
+
+				<div class="md:w-1/2 relative">
+					<img src="./image/index/Hero Section2.png" alt="" />
+					<div class="absolute inset-0 flex flex-col justify-center items-center text-blue-800 px-4">
+						<h1 class="text-[7.5rem] font-black text-left">Alyse Wang</h1>
+						<p class="text-[1.75rem] font-bold mt-2 text-left">前端工程師 & 職涯諮詢師</p>
+					</div>					
+				</div>
+				
+				<div class="absolute w-[80%] h-[362px] right-[700px] translate-y-[700px] bg-white text-black text-base px-20 py-10 max-w-md ">
+					<p class="mb-2">嗨，我是 Alyse 一名深耕前端技術的工程師。</p>
+					<p>
+						擅長 React、Vue 等框架，同時熱愛為轉職與新手工程師提供職涯指導。邀請你與我一起，開啟更具潛能的程式與職涯之旅！
+					</p>
+					<div class="flex flex-row justify-start text-blue-800 gap-1">
+						<img
+							class="w-6 h-6 social-icon hover:opacity-80 transition"
+							src="./image/index/onlyIcon.png"
+							alt="YouTube Icon"
+						/>
+						<img
+							class="w-6 h-6 social-icon hover:opacity-80 transition"
+							src="./image/index/onlyIcon-1.png"
+							alt="Apple Podcast Icon"
+						/>
+						<img
+							class="w-6 h-6 social-icon hover:opacity-80 transition"
+							src="./image/index/onlyIcon-2.png"
+							alt="Facebook Icon"
+						/>
+						<img
+							class="w-6 h-6 social-icon hover:opacity-80 transition"
+							src="./image/index/onlyIcon-3.png"
+							alt="LinkedIn Icon"
+						/>
+						<img
+							class="w-6 h-6 social-icon hover:opacity-80 transition"
+							src="./image/index/onlyIcon-4.png"
+							alt="Instagram Icon"
+						/>
+					</div>
+				</div>
+
+			<!-- </section>
+			<section class="bg-white px-6 py-8 md:px-16 md:py-12 text-black text-base md:text-xl max-w-md leading-relaxed">
+					<p class="mb-2">嗨，我是 Alyse 一名深耕前端技術的工程師。</p>
+					<p>
+						擅長 React、Vue 等框架，同時熱愛為轉職與新手工程師提供職涯指導。邀請你與我一起，開啟更具潛能的程式與職涯之旅！
+					</p>
+					<div class="flex flex-row justify-start text-blue-800 gap-1">
+						<img
+							class="w-6 h-6 social-icon hover:opacity-80 transition"
+							src="./image/index/onlyIcon.png"
+							alt="YouTube Icon"
+						/>
+						<img
+							class="w-6 h-6 social-icon hover:opacity-80 transition"
+							src="./image/index/onlyIcon-1.png"
+							alt="Apple Podcast Icon"
+						/>
+						<img
+							class="w-6 h-6 social-icon hover:opacity-80 transition"
+							src="./image/index/onlyIcon-2.png"
+							alt="Facebook Icon"
+						/>
+						<img
+							class="w-6 h-6 social-icon hover:opacity-80 transition"
+							src="./image/index/onlyIcon-3.png"
+							alt="LinkedIn Icon"
+						/>
+						<img
+							class="w-6 h-6 social-icon hover:opacity-80 transition"
+							src="./image/index/onlyIcon-4.png"
+							alt="Instagram Icon"
+						/>					
+			</section> -->
 		</header>
 		<main>
 			<section class="services">
